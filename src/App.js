@@ -7,11 +7,14 @@ const average = (arr) =>
 const KEY = "36937569";
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
   const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedID, setSelectedId] = useState(null);
+  const [watched, setWatched] = useState(() => {
+    const stored = localStorage.getItem("watched");
+    return JSON.parse(stored);
+  });
 
   const closeMovieDetail = () => {
     setSelectedId(null);
@@ -59,6 +62,10 @@ export default function App() {
       controler.abort();
     };
   }, [query]);
+
+  useEffect(() => {
+    localStorage.setItem("watched", JSON.stringify(watched));
+  }, [watched]);
 
   return (
     <>
