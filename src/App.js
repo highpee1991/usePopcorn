@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useMovies } from "./customHooks/useMovies";
 import useLocalStorage from "./customHooks/useLocalStorage";
-import { SearchResultCounter } from "./searchAndResult";
 import { LogoMenu } from "./components/logoMenu";
 import { Main } from "./components/main";
+import { SearchResultCounter } from "./components/searchAndResult";
 
 export default function App() {
   const [query, setQuery] = useState("");

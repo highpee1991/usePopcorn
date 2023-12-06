@@ -1,4 +1,4 @@
-import { Search } from "../searchAndResult";
+import { Search } from "./searchAndResult";
 
 export const LogoMenu = ({ query, setQuery, children }) => {
   return (

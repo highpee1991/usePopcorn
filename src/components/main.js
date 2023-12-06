@@ -1,4 +1,4 @@
-import { average } from "../config";
+import { average } from "../average";
 import Box from "./box";
 import { CustomError } from "./customError";
 import { Loader } from "./isLoader";

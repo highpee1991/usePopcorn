@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import config from "../../config";
 import { useKey } from "../../customHooks/useKey";
 import { Loader } from "../isLoader";
-import StarRating from "../../startRating";
+import StarRating from "../startRating";
 
 const KEY = config.KEY;
 export const MovieDetails = ({
